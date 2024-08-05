@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="banner"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0;
+        }
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(106, 23, 25, 0.75), rgba(86, 81, 81, 0.8)) ,url(foodunit.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .payment-form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffffff;
+            border-radius: 100px;
+        }
+        input[type="submit"] {
+            background-color: #6a1719;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgba(106, 23, 25, 0.75);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Payment Method</h2>
+<div class="payment-form">
+    <form id="paymentForm">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" required>
+
+        <label for="expirationDate">Expiration Date (MM/YY):</label>
+        <input type="text" id="expirationDate" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" required>
+
+        <input type="submit" value="Submit Payment">
+    </form>
+    <div id="message" style="margin-top: 20px;"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
